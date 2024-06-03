@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #1f1f1f;
+    --secondary-color: #2c2c2c;
+    --accent-color: #ff6b6b;
+    --text-color: #ffffff;
+    --gray-color: #cccccc;
+    --transition-duration: 0.3s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.login-container,
+.content-container {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: opacity var(--transition-duration) ease-in-out;
+}
+
+.login-container h2,
+.content-container h3 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--gray-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: border-color var(--transition-duration) ease;
+}
+
+.form-group input:focus {
+    border-color: var(--accent-color);
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.btn:hover {
+    background-color: #ff4b4b;
+}
+
+.logout-container {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.header {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.header h1 span {
+    color: var(--text-color);
+}
+
+.search-container {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.search-element {
+    position: relative;
+}
+
+.search-element .form-control {
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color var(--transition-duration) ease;
+}
+
+.search-element .form-control:focus {
+    border-color: var(--accent-color);
+}
+
+.search-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity var(--transition-duration) ease;
+}
+
+.search-list .search-list-item {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.search-list .search-list-item:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.search-item-thumbnail img {
+    width: 50px;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.search-item-info h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.search-item-info p {
+    font-size: 0.8rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.search-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-list::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.hide-search-list {
+    display: none;
+}
+
+.result-container {
+    padding: 2rem 0;
+}
+
+.movie-poster img {
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: block;
+    transition: transform var(--transition-duration) ease;
+}
+
+.movie-poster img:hover {
+    transform: scale(1.05);
+}
+
+.movie-info {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.movie-title {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.movie-misc-info {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.movie-misc-info li {
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--primary-color);
+}
+
+.genre,
+.writer,
+.actors,
+.plot,
+.language,
+.awards {
+    margin: 0.5rem 0;
+}
+
+.genre {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+}
